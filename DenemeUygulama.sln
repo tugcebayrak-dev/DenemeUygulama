@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DenemeUygulama", "DenemeUygulama\DenemeUygulama.csproj", "{5B029113-50F7-4CC3-B34F-CAF0791BE3C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DenemeUygulama.Data", "DenemeUygulama.Data\DenemeUygulama.Data.csproj", "{928BFEAF-A4BB-42AE-B855-2827FF1CC952}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B029113-50F7-4CC3-B34F-CAF0791BE3C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B029113-50F7-4CC3-B34F-CAF0791BE3C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B029113-50F7-4CC3-B34F-CAF0791BE3C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B029113-50F7-4CC3-B34F-CAF0791BE3C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{928BFEAF-A4BB-42AE-B855-2827FF1CC952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{928BFEAF-A4BB-42AE-B855-2827FF1CC952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{928BFEAF-A4BB-42AE-B855-2827FF1CC952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{928BFEAF-A4BB-42AE-B855-2827FF1CC952}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8AC758A4-3375-420F-AD12-DFF58A490325}
+	EndGlobalSection
+EndGlobal

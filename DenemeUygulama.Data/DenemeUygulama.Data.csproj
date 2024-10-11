@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{928BFEAF-A4BB-42AE-B855-2827FF1CC952}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DenemeUygulama.Data</RootNamespace>
+    <AssemblyName>DenemeUygulama.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Description, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Description.1.0.0\lib\Description.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraMap.v19.2, Version=19.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v19.2, Version=19.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Araclar\Enums.cs" />
+    <Compile Include="Araclar\Extensions.cs" />
+    <Compile Include="Araclar\FileOperation.cs" />
+    <Compile Include="Araclar\IniFile.cs" />
+    <Compile Include="Araclar\JsonCustomResolver.cs" />
+    <Compile Include="Araclar\KullaniciHelper.cs" />
+    <Compile Include="Araclar\Log.cs" />
+    <Compile Include="Araclar\MethodsHelper.cs" />
+    <Compile Include="Araclar\RegeditHelper.cs" />
+    <Compile Include="Araclar\Sabitler.cs" />
+    <Compile Include="Araclar\Sifreleme.cs" />
+    <Compile Include="Araclar\StaticClassUI.cs" />
+    <Compile Include="Classes\vAndonRapor.cs" />
+    <Compile Include="Classes\vAriza.cs" />
+    <Compile Include="Classes\vDepo.cs" />
+    <Compile Include="Classes\vEtiket.cs" />
+    <Compile Include="Classes\vEvrak.cs" />
+    <Compile Include="Classes\vIslemGecmisi.cs" />
+    <Compile Include="Classes\vKaliteKontrol.cs" />
+    <Compile Include="Classes\vIrsaliye.cs" />
+    <Compile Include="Classes\vIstasyon.cs" />
+    <Compile Include="Classes\vKKGrupKodlari.cs" />
+    <Compile Include="Classes\vKullanici.cs" />
+    <Compile Include="Classes\vKullaniciVekil.cs" />
+    <Compile Include="Classes\vKullaniciYetki.cs" />
+    <Compile Include="Classes\vModul.cs" />
+    <Compile Include="Classes\vOlcumKayitlari.cs" />
+    <Compile Include="Classes\vOpBilesenleri.cs" />
+    <Compile Include="Classes\vOperasyonKurgu.cs" />
+    <Compile Include="Classes\vOperasyonKurguEslestirme.cs" />
+    <Compile Include="Classes\vOperasyonlar.cs" />
+    <Compile Include="Classes\vPersonel.cs" />
+    <Compile Include="Classes\vPlanlama.cs" />
+    <Compile Include="Classes\vPlanlamaHareket.cs" />
+    <Compile Include="Classes\vProsesKKYapilacaklar.cs" />
+    <Compile Include="Classes\vRapor.cs" />
+    <Compile Include="Classes\vRaporData.cs" />
+    <Compile Include="Classes\vRaporDataKullanici.cs" />
+    <Compile Include="Classes\vRecete.cs" />
+    <Compile Include="Classes\vStoklar.cs" />
+    <Compile Include="Classes\vTezgah.cs" />
+    <Compile Include="Classes\vTezgahPersonelDurus.cs" />
+    <Compile Include="Classes\vTuketilenBilesenListesi.cs" />
+    <Compile Include="Classes\vUretimSonuKaydiYapilacaklar.cs" />
+    <Compile Include="Classes\vUygunsuzUrun.cs" />
+    <Compile Include="Contexts\Context.cs" />
+    <Compile Include="Dapper\Models\TBLCASABIT.cs" />
+    <Compile Include="Dapper\Scripts\DpScripts.cs" />
+    <Compile Include="Entity\Context\EFContext.cs" />
+    <Compile Include="Entity\Models\BaseClass.cs" />
+    <Compile Include="Entity\Models\IslemLog.cs" />
+    <Compile Include="Entity\Models\tEtiket.cs" />
+    <Compile Include="Entity\Models\tGirdiKaliteKontrol.cs" />
+    <Compile Include="Entity\Models\tHataLog.cs" />
+    <Compile Include="Entity\Models\tIstasyonEslestirme.cs" />
+    <Compile Include="Entity\Models\tKaliteKontrolHareket.cs" />
+    <Compile Include="Entity\Models\tKullanici.cs" />
+    <Compile Include="Entity\Models\tKullaniciVekil.cs" />
+    <Compile Include="Entity\Models\tKullaniciYetki.cs" />
+    <Compile Include="Entity\Models\tLog.cs" />
+    <Compile Include="Entity\Models\tModul.cs" />
+    <Compile Include="Entity\Models\tOperasyon.cs" />
+    <Compile Include="Entity\Models\tOperasyonKurgu.cs" />
+    <Compile Include="Entity\Models\tOperasyonKurguDat.cs" />
+    <Compile Include="Entity\Models\tOperasyonKurguEslestirme.cs" />
+    <Compile Include="Entity\Models\tKurguProsesKaliteKontrol.cs" />
+    <Compile Include="Entity\Models\tOperasyonKurguEslSepet.cs" />
+    <Compile Include="Entity\Models\tOperasyonKurguGenel.cs" />
+    <Compile Include="Entity\Models\tOperasyonKurguUAK.cs" />
+    <Compile Include="Entity\Models\tPersonelTezgahHareket.cs" />
+    <Compile Include="Entity\Models\tPlanlama.cs" />
+    <Compile Include="Entity\Models\tPlanlamaHareket.cs" />
+    <Compile Include="Entity\Models\tProsesKaliteKontrol.cs" />
+    <Compile Include="Entity\Models\tProsesKKYapilacaklar.cs" />
+    <Compile Include="Entity\Models\tRapor.cs" />
+    <Compile Include="Entity\Models\tSure.cs" />
+    <Compile Include="Entity\Models\tTezgah.cs" />
+    <Compile Include="Entity\Models\tTezgahPersonelEslestirme.cs" />
+    <Compile Include="Entity\Models\tTuketilenBilesenListesi.cs" />
+    <Compile Include="Entity\Models\tUretimSonuKaydiYapilacaklar.cs" />
+    <Compile Include="Entity\Models\tUygunsuzUrunResimler.cs" />
+    <Compile Include="Entity\Models\tUygunsuzUrun.cs" />
+    <Compile Include="Entity\Models\_Brk_Prj_tOrnekModel3.cs" />
+    <Compile Include="Entity\Repositories\EFRepository.cs" />
+    <Compile Include="Entity\Repositories\IEFRepository.cs" />
+    <Compile Include="Entity\UnitOfWork\EFUnitOfWork.cs" />
+    <Compile Include="Entity\UnitOfWork\IEFUnitOfWork.cs" />
+    <Compile Include="Migrations\202110241902302_24.10.21migration.cs" />
+    <Compile Include="Migrations\202110241902302_24.10.21migration.designer.cs">
+      <DependentUpon>202110241902302_24.10.21migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Netsis\NetOpenxContext.cs" />
+    <Compile Include="Netsis\NetOpenxRepository.cs" />
+    <Compile Include="Netsis\NetsisHelper.cs" />
+    <Compile Include="Netsis\RestModels\myItemSlipLines.cs" />
+    <Compile Include="Netsis\RestModels\myItemSlips.cs" />
+    <Compile Include="Netsis\RestModels\myItemSlipsHeader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\FrmHelper.cs" />
+    <Compile Include="Tools\Log.cs" />
+    <Compile Include="Tools\Sifreleme.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\BerkaHizmet.ico" />
+    <Content Include="Images\BerkaHizmet.png" />
+    <Content Include="Images\BerkaHizmet1.png" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Netsis\_RestLib\NetOpenX.Rest.Client.dll" />
+    <Content Include="Netsis\_RestLib\NetOpenX.Rest.Client.XML" />
+    <Content Include="Netsis\_RestLib\Newtonsoft.Json.dll" />
+    <Content Include="Netsis\_RestLib\Newtonsoft.Json.xml" />
+    <Content Include="Netsis\_RestLib\System.Net.Http.Formatting.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202110241902302_24.10.21migration.resx">
+      <DependentUpon>202110241902302_24.10.21migration.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
